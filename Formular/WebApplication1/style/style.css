@@ -1,0 +1,29 @@
+﻿:root {
+    --col1: #3458A0;
+    --col2: #3E4E58;
+    --col3: #FFFFFF;
+    --col4: #000000;
+    --col5: #0D1C25;
+}
+
+body {
+    font-family: "interstate",sans-serif !important;
+    color: var(--col4)!important;
+    background-image: url('../img/sea.png');
+    
+}
+
+nav{
+    background-color: var(--col2);
+}
+
+footer {
+    background-color: var(--col5);
+    position: relative;
+    bottom: 0;
+    margin-bottom: 1%;
+}
+
+#form1{
+    min-height: auto;
+}
