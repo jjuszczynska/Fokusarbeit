@@ -8,22 +8,38 @@
 
 body {
     font-family: "interstate",sans-serif !important;
-    color: var(--col4)!important;
+    color: var(--col3);
     background-image: url('../img/sea.png');
-    
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-attachment: scroll;
 }
 
-nav{
+
+nav {
     background-color: var(--col2);
+    padding-left: 5%!important;
+    padding-right: 2%!important;
 }
 
 footer {
     background-color: var(--col5);
-    position: relative;
+    position: absolute;
     bottom: 0;
-    margin-bottom: 1%;
+    width: 100%;
 }
 
 #form1{
     min-height: auto;
+    padding: 5%!important;
+}
+
+a{
+    text-decoration: none;
+    color: var(--col3);
+}
+
+.btn{
+    background-color: var(--col1);
+    border-color: var(--col1);
 }

@@ -5,18 +5,19 @@
 <html>
 <head runat="server">
     <title id="titlePage"></title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
-    <link href="style/style.css" rel="stylesheet" />   
+    <link href="style/style.css" rel="stylesheet" />
     <asp:ContentPlaceHolder ID="head" runat="server">
-
     </asp:ContentPlaceHolder>
 </head>
 <body>
     <nav class="navbar">
-      
-        <img src="img/innosolv_logo.png"  height="30" alt="">
-      
+
+        <a href="https://www.innosolv.ch/.">
+            <img src="img/innosolv_logo.png" height="30" alt=""></a>
+        <a href="index.aspx"><i class="bi bi-house" height="30"></i></a>
     </nav>
     <form id="form1" runat="server">
         <div class="container">
@@ -24,58 +25,59 @@
                 <div class="col-lg-2"></div>
                 <div class="col-lg-8 container">
                     <asp:ContentPlaceHolder ID="ContentPlaceHolder" runat="server">
-
                     </asp:ContentPlaceHolder>
                 </div>
                 <div class="col-lg-2"></div>
             </div>
         </div>
     </form>
-   
-<footer class=" text-center ">
-  
-  <div class="container">
 
-    <section class="links">
-      <div class="row">
-        <div class="col-lg-2"></div>
-          <div class="col-lg-8 container">
-              <div class="row">
-                <div class="col-lg-4">
-                  <p>
-                      <a href="Impressum.aspx">Impressum</a>
-                  </p>
+    <footer class=" text-center ">
+
+        <div class="container">
+
+            <section class="links">
+                <div class="row">
+                    <div class="col-lg-2"></div>
+                    <div class="col-lg-8 container">
+                        <div class="row">
+                            <div class="col-lg-4">
+                                <p>
+                                    <a href="Impressum.aspx">Impressum</a>
+                                </p>
+                            </div>
+                            <div class="col-lg-4">
+                                <p>
+                                    <a href="Contact.aspx">Kontakt</a>
+                                </p>
+                            </div>
+                            <div class="col-lg-4">
+                                <p class="text-right">
+                                    <a href="https://www.innosolv.ch/">Homepage Innosolv</a>
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-lg-2"></div>
                 </div>
-                <div class="col-lg-4">
-                  <p>
-                      <a href="Contact.aspx">Kontakt</a>
-                  </p>
-                </div>
-                  <div class="col-lg-4">
-                  <p class="text-right">
-                      <a href="https://www.innosolv.ch/">Homepage Innosolv</a>
-                  </p>
-                </div> 
 
-              </div>
-          </div>
-          <div class="col-lg-2"></div>
-      </div>
-        
-     
-    </section>
-   
 
-  </div>
-  
-  <div class="p-3 copyright container" >
-      <div class="col-lg-2"></div>
-      <div class="col-lg-8"><p> ©2023 Juszczynska Julia:</p></div>
-      <div class="col-lg-2"></div>
-  </div>
- 
+            </section>
 
-</footer>
+
+        </div>
+
+        <div class="p-3 copyright container">
+            <div class="col-lg-2"></div>
+            <div class="col-lg-8">
+                <p>©2023 Juszczynska Julia:</p>
+            </div>
+            <div class="col-lg-2"></div>
+        </div>
+
+
+    </footer>
 
 </body>
 </html>

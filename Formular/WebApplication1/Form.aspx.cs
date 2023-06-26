@@ -1,14 +1,15 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+using System.Configuration;
+using System.Data;
+using System.Data.SqlClient;
 using System.Web.UI;
-using System.Web.UI.WebControls;
+
 
 namespace WebApplication1
 {
     public partial class Form : System.Web.UI.Page
     {
+
         protected override void OnInit(System.EventArgs e)
         {
             base.OnInit(e);
@@ -30,5 +31,31 @@ namespace WebApplication1
         {
 
         }
+
+
+
+        protected void onSend(object sender, EventArgs e)
+        {
+            string conStr = ConfigurationManager.ConnectionStrings["ConnStr"].ConnectionString;
+
+            using (SqlConnection con = new SqlConnection(conStr))
+            {
+                SqlCommand cmd = new SqlCommand("spAddForm", con);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.Add("@pCourse", SqlDbType.Int).Value = ddKurs.SelectedIndex + 1;
+                cmd.Parameters.Add("@pBenotung", SqlDbType.Int).Value = rbNote.SelectedItem.Value;
+                cmd.Parameters.Add("@pSchlecht", SqlDbType.Text).Value = tbWorst.Text;
+                cmd.Parameters.Add("@pBest", SqlDbType.Text).Value = tbBest.Text;
+                cmd.Parameters.Add("@pVerbesser", SqlDbType.Text).Value = tbProposal.Text;
+
+                con.Open();
+                cmd.ExecuteNonQuery();
+                con.Close();
+            }
+
+            Response.Redirect("index.aspx");
+        }
+
     }
 }
